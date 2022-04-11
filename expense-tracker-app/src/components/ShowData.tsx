@@ -5,7 +5,7 @@ import Form from "./Form";
 import React from "react";
 
 function ShowData() {
-    
+
     const [items, setItems] = useState<DataList[]>([]);
     const [showForm, setShowForm] = useState<boolean>(false);
     const [sum, setSum] = useState<number | null>()
@@ -77,13 +77,13 @@ function ShowData() {
                 items && (
                     items.map(
                         (user, idx) => {
-                            return(
-                            <div key={idx}>
-                                <div className="use-inline date">{user.setDate}</div>
-                                <div className="use-inline">{user.product}</div>
-                                <div className="use-inline price">{user.price}</div>
-                                <div className="use-inline" style={ {width:112}}>{user.payeeName}</div>
-                            </div>
+                            return (
+                                <div key={idx}>
+                                    <div className="use-inline date">{user.setDate}</div>
+                                    <div className="use-inline">{user.product}</div>
+                                    <div className="use-inline price">{user.price}</div>
+                                    <div className="use-inline" style={{ width: 112 }}>{user.payeeName}</div>
+                                </div>
                             )
                         }
                     )
@@ -96,8 +96,8 @@ function ShowData() {
             <span className="use-inline total Rohina">{rohinaspent}</span> <br />
             <div className="use-inline ">Mayuri paid: </div>
             <span className="use-inline total Mayuri">{mayurispent}</span> <br />
-            <span className="use-inline payable">{rohinaspent > mayurispent? "Pay Rohina " : "Pay Mayuri"}</span>
-            <span className="use-inline payable price"> {Math.abs((rohinaspent-mayurispent)/2)}</span>
+            <span className="use-inline payable">{rohinaspent > mayurispent ? "Pay Rohina " : "Pay Mayuri"}</span>
+            <span className="use-inline payable price"> {Math.abs((rohinaspent - mayurispent) / 2)}</span>
         </>
 
     )

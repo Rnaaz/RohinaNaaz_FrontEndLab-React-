@@ -58,7 +58,7 @@ class Form extends Component<Props, State>{
 
     submitHandler = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const stateData = {...this.state};
+        const stateData = { ...this.state };
         const data = await pushDataFromUser(stateData);
         this.props.onTrue();
     }
